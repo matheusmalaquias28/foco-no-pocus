@@ -3,6 +3,7 @@ import Link from "next/link";
 import { nav, site, whatsapp } from "@/content";
 import { InstagramIcon, WhatsAppIcon } from "./ui";
 import { AgendaFooterList } from "./Agenda";
+import { EnergyCredit } from "./EnergyCredit";
 
 export function Footer() {
   return (
@@ -66,24 +67,7 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-6 text-xs text-white/50 sm:px-8 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-6">
             <p>© Foco no POCUS. Todos os direitos reservados.</p>
-            <a
-              href="https://energymidia.com.br"
-              target="_blank"
-              rel="noopener"
-              className="group inline-flex items-center gap-1.5 transition hover:text-white"
-              aria-label="Desenvolvido com energia pela Energy Mídia"
-            >
-              <span aria-hidden="true">
-                Desenvolvido com <span className="inline-block transition group-hover:scale-125">⚡</span> pela
-              </span>
-              <Image
-                src="/img/energy-midia.svg"
-                alt=""
-                width={829}
-                height={311}
-                className="h-6 w-auto opacity-80 transition group-hover:opacity-100"
-              />
-            </a>
+            <EnergyCredit />
           </div>
           <nav aria-label="Rodapé" className="flex flex-wrap gap-x-5 gap-y-2">
             {nav.map((item) => (
